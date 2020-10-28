@@ -1,17 +1,16 @@
-// #include "Extension\DirectX11\DXGraphics11.hpp"
-#include "StdAfx.h"
-#include "GameMain.h"
+#include "../StdAfx.h"
+#include "TitleScene.hpp"
 
 /// <summary>
 /// Allows the game to perform any initialization it needs to before starting to run.
-/// This is where it can query for any required services and load all of your content.
-/// Initialize will enumerate through any components and initialize them as well.
+/// This is where it can query for any required services and load any non-graphic
+/// related content.  Calling base.Initialize will enumerate through any components
+/// and initialize them as well.
 /// </summary>
-bool GameMain::Initialize()
+bool TitleScene::Initialize()
 {
 	// TODO: Add your initialization logic here
-	WindowTitle(_T("ES Game Library"));
-
+	Title = GraphicsDevice.CreateSpriteFromFile(_T("TitleSprite/Title.png"));
 
 	return true;
 }
@@ -20,7 +19,7 @@ bool GameMain::Initialize()
 /// Finalize will be called once per game and is the place to release
 /// all resource.
 /// </summary>
-void GameMain::Finalize()
+void TitleScene::Finalize()
 {
 	// TODO: Add your finalization logic here
 
@@ -33,13 +32,13 @@ void GameMain::Finalize()
 /// <returns>
 /// Scene continued value.
 /// </returns>
-int GameMain::Update()
+int TitleScene::Update()
 {
-	// TODO: Add your update logic here
+    // TODO: Add your update logic here
 	KeyboardBuffer keybuf = Keyboard->GetBuffer();
 	if (keybuf.IsPressed(Keys_Space))
 	{
-		return GAME_SCENE(new TitleScene);
+		return GAME_SCENE(new GameMain);
 	}
 
 	return 0;
@@ -48,16 +47,16 @@ int GameMain::Update()
 /// <summary>
 /// This is called when the game should draw itself.
 /// </summary>
-void GameMain::Draw()
+void TitleScene::Draw()
 {
 	// TODO: Add your drawing code here
 	GraphicsDevice.Clear(Color_CornflowerBlue);
 
 	GraphicsDevice.BeginScene();
 
-
 	SpriteBatch.Begin();
 
+	SpriteBatch.Draw(*Title, Vector3(0, 0, 0));
 
 	SpriteBatch.End();
 
