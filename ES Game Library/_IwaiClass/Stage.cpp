@@ -17,26 +17,26 @@ void Stage::Initialize()
 	/**
 * @brief ブロックの初期設定
 */
-	block = GraphicsDevice.CreateModelFromFile(_T("block.X"));
+	block = GraphicsDevice.CreateModelFromFile(_T("MapSprite/block.X"));
 	block->SetScale(scale);
 	block->SetMaterial(material);
 	/**
 * @brief 破壊できないブロックの初期設定
 */
-	pillar = GraphicsDevice.CreateModelFromFile(_T("Pillar.X"));
+	pillar = GraphicsDevice.CreateModelFromFile(_T("MapSprite/Pillar.X"));
 	pillar->SetScale(scale);
 	pillar->SetMaterial(material);
 	/**
 * @brief mapの初期設定
 */
-	map = GraphicsDevice.CreateModelFromFile(_T("ground.X"));
+	map = GraphicsDevice.CreateModelFromFile(_T("MapSprite/ground.X"));
 	map->SetScale(scale);
 	map->SetMaterial(material);
 	map->SetPosition(9, 0, 7);
 	/**
 * @brief ファイル読み込み
 */
-	std::ifstream infile("map.csv");
+	std::ifstream infile("MapSprite/map.csv");
 	std::string line;
 	for (int z = 0; z < 15; ++z) {
 		for (int x = 0; x < _countof(xz[z]); ++x) {
