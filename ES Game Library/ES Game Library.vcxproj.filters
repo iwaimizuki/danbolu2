@@ -112,6 +112,9 @@
     <Filter Include="変換用アセット">
       <UniqueIdentifier>{82621faf-8306-44c1-bdbf-bfdd763ca17c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="IwaiClasses">
+      <UniqueIdentifier>{4e5b12a6-fa1b-4fe3-8be0-4d8f538ee263}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameMain.cpp">
@@ -255,6 +258,9 @@
     </ClCompile>
     <ClCompile Include="Extension\Direct2D\Direct2D.cpp">
       <Filter>ソース ファイル\拡張\Direct2D</Filter>
+    </ClCompile>
+    <ClCompile Include="_IwaiClass\Stage.cpp">
+      <Filter>IwaiClasses</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -411,6 +417,9 @@
     </ClInclude>
     <ClInclude Include="Extension\Direct2D\Direct2D.hpp">
       <Filter>ヘッダー ファイル\拡張\Direct2D</Filter>
+    </ClInclude>
+    <ClInclude Include="_IwaiClass\Stage.h">
+      <Filter>IwaiClasses</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -201,6 +201,7 @@
     <ClCompile Include="Framework\SingleApp.cpp" />
     <ClCompile Include="Framework\Stream.cpp" />
     <ClCompile Include="Framework\Thread.cpp" />
+    <ClCompile Include="_IwaiClass\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Extension\Direct2D\Direct2D.hpp" />
@@ -255,6 +256,7 @@
     <ClInclude Include="Framework\Stream.hpp" />
     <ClInclude Include="Framework\Thread.hpp" />
     <ClInclude Include="..\Resource\resource.h" />
+    <ClInclude Include="_IwaiClass\Stage.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Resource\DirectX.ico" />

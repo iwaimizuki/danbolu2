@@ -2,7 +2,7 @@
 
 #include "ESGLib.h"
 #include "GameScene/GameScene.hpp"
-
+#include"_IwaiClass/Stage.h"
 class GameMain : public CGameScene {
 public:
 	GameMain() : DefaultFont(GraphicsDevice.CreateDefaultFont())
@@ -56,8 +56,9 @@ private:
 
 private:
 	// •Ï”éŒ¾
-
-	int a;
+	Stage stage;
+	CAMERA camera;
+	std::vector<Vector3> block_pos;
 	// ŠÖ”éŒ¾
 
 };
