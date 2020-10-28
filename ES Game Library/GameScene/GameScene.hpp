@@ -81,4 +81,4 @@ private:
 //	ゲームシーンインクルードファイル
 //------------------------------------------------------------------------------
 #include "../GameMain.h"
-#include"../GameScene/TitleScene.hpp"
+#include"../GameScene/ResultScene.hpp"

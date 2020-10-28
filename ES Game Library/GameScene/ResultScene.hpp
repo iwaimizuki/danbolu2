@@ -3,14 +3,14 @@
 #include "GameScene.hpp"
 #include "../ESGLib.h"
 
-class TitleScene : public CGameScene {
+class ResultScene : public CGameScene {
 public:
-	TitleScene()
+	ResultScene()
 	{
 //		ContentRootDirectory(_T("Content"));
 	}
 
-	virtual ~TitleScene()
+	virtual ~ResultScene()
 	{
 		Finalize();
 
@@ -51,11 +51,11 @@ public:
 
 private:
 	void Finalize();
-
 private:
 	// 変数宣言
-	SPRITE Title;
-
+	SPRITE Result;
+	int Winplayer;//勝ったプレイヤー名
+	FONT Font;
 	// 関数プロトタイプ
 
 };

@@ -1,5 +1,5 @@
 #include "../StdAfx.h"
-#include "TitleScene.hpp"
+#include "ResultScene.hpp"
 
 /// <summary>
 /// Allows the game to perform any initialization it needs to before starting to run.
@@ -7,11 +7,11 @@
 /// related content.  Calling base.Initialize will enumerate through any components
 /// and initialize them as well.
 /// </summary>
-bool TitleScene::Initialize()
+bool ResultScene::Initialize()
 {
 	// TODO: Add your initialization logic here
-	Title = GraphicsDevice.CreateSpriteFromFile(_T("TitleSprite/Title.png"));
-
+	Result = GraphicsDevice.CreateSpriteFromFile(_T("ResultSprite/Result.png"));
+	Font = GraphicsDevice.CreateSpriteFont(_T("ContinueAL"), 100);
 	return true;
 }
 
@@ -19,7 +19,7 @@ bool TitleScene::Initialize()
 /// Finalize will be called once per game and is the place to release
 /// all resource.
 /// </summary>
-void TitleScene::Finalize()
+void ResultScene::Finalize()
 {
 	// TODO: Add your finalization logic here
 
@@ -32,14 +32,10 @@ void TitleScene::Finalize()
 /// <returns>
 /// Scene continued value.
 /// </returns>
-int TitleScene::Update()
+int ResultScene::Update()
 {
     // TODO: Add your update logic here
-	KeyboardBuffer keybuf = Keyboard->GetBuffer();
-	if (keybuf.IsPressed(Keys_Space))
-	{
-		return GAME_SCENE(new GameMain);
-	}
+
 
 	return 0;
 }
@@ -47,7 +43,7 @@ int TitleScene::Update()
 /// <summary>
 /// This is called when the game should draw itself.
 /// </summary>
-void TitleScene::Draw()
+void ResultScene::Draw()
 {
 	// TODO: Add your drawing code here
 	GraphicsDevice.Clear(Color_CornflowerBlue);
@@ -56,8 +52,11 @@ void TitleScene::Draw()
 
 	SpriteBatch.Begin();
 
-	SpriteBatch.Draw(*Title, Vector3(0, 0, 0));
-
+	SpriteBatch.Draw(*Result, Vector3(0, 0, 0));
+	/**
+* @brief èüÇ¡ÇΩÉvÉåÉCÉÑÅ[ñº
+*/
+	SpriteBatch.DrawString(Font, Vector2(350, 0), Color(0, 0, 0), _T("%d"), Winplayer);
 	SpriteBatch.End();
 
 	GraphicsDevice.EndScene();
