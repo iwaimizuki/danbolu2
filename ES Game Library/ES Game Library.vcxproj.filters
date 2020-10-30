@@ -112,6 +112,15 @@
     <Filter Include="変換用アセット">
       <UniqueIdentifier>{82621faf-8306-44c1-bdbf-bfdd763ca17c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\MyClass">
+      <UniqueIdentifier>{4da78874-5df1-4807-ac42-262e3630a476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\MyClass">
+      <UniqueIdentifier>{27e26683-a6cf-4bba-b71d-9621b4a55e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\MyClass\Item">
+      <UniqueIdentifier>{dbf6622d-f148-4c18-8a73-3412124e2267}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameMain.cpp">
@@ -255,6 +264,9 @@
     </ClCompile>
     <ClCompile Include="Extension\Direct2D\Direct2D.cpp">
       <Filter>ソース ファイル\拡張\Direct2D</Filter>
+    </ClCompile>
+    <ClCompile Include="_MyClass\Item\Item.cpp">
+      <Filter>ソース ファイル\MyClass\Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -411,6 +423,9 @@
     </ClInclude>
     <ClInclude Include="Extension\Direct2D\Direct2D.hpp">
       <Filter>ヘッダー ファイル\拡張\Direct2D</Filter>
+    </ClInclude>
+    <ClInclude Include="_MyClass\Item\Item.hpp">
+      <Filter>ソース ファイル\MyClass\Item</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

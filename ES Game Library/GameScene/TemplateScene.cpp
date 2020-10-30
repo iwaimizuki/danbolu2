@@ -7,7 +7,7 @@
 /// related content.  Calling base.Initialize will enumerate through any components
 /// and initialize them as well.
 /// </summary>
-bool TemplateScene::Initialize()
+bool Item::Initialize()
 {
 	// TODO: Add your initialization logic here
 
@@ -19,7 +19,7 @@ bool TemplateScene::Initialize()
 /// Finalize will be called once per game and is the place to release
 /// all resource.
 /// </summary>
-void TemplateScene::Finalize()
+void Item::Finalize()
 {
 	// TODO: Add your finalization logic here
 
@@ -32,7 +32,7 @@ void TemplateScene::Finalize()
 /// <returns>
 /// Scene continued value.
 /// </returns>
-int TemplateScene::Update()
+int Item::Update()
 {
     // TODO: Add your update logic here
 
@@ -43,7 +43,7 @@ int TemplateScene::Update()
 /// <summary>
 /// This is called when the game should draw itself.
 /// </summary>
-void TemplateScene::Draw()
+void Item::Draw()
 {
 	// TODO: Add your drawing code here
 	GraphicsDevice.Clear(Color_CornflowerBlue);

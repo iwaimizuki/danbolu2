@@ -3,14 +3,14 @@
 #include "GameScene.hpp"
 #include "../ESGLib.h"
 
-class TemplateScene : public CGameScene {
+class Item : public CGameScene {
 public:
-	TemplateScene()
+	Item()
 	{
 //		ContentRootDirectory(_T("Content"));
 	}
 
-	virtual ~TemplateScene()
+	virtual ~Item()
 	{
 		Finalize();
 

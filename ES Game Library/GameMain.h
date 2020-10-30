@@ -1,7 +1,9 @@
 #pragma once
 
+
 #include "ESGLib.h"
 #include "GameScene/GameScene.hpp"
+#include "_MyClass/Item/Item.hpp"
 
 class GameMain : public CGameScene {
 public:
@@ -50,6 +52,7 @@ public:
 	virtual int  Update();
 	virtual void Draw();
 
+
 private:
 	void Finalize();
 	FONT DefaultFont;
@@ -57,7 +60,33 @@ private:
 private:
 	// 変数宣言
 
-	int a;
+	Item* item_class;
+
+	// @brief　モデル
+	MODEL block;
+	MODEL metal;
+	MODEL player;
+
+	// @brief　カメラ
+	CAMERA camera;
+
+	// @brief 当たり判定用のモデル
+	MODEL player_hitbox;
+	MODEL block_hitbox;
+	MODEL metal_hitbox;
+	
+	// @brief 当たり判定用の箱
+	OrientedBoundingBox player_obb;
+	OrientedBoundingBox block_obb;
+	OrientedBoundingBox metal_obb;
+
+	// @brief 当たり判定用のフラグ
+	bool hit_state;
+
+	// @brief ブロックとアイテム切り替え用のフラグ
+	bool block_state;
+	bool metal_state;
+
 	// 関数宣言
 
 };
